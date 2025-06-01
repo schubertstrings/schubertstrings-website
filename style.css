@@ -1,0 +1,107 @@
+/* Reset and base */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-color: #fdfaf5;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.5em;
+  color: #5a3e2b;
+}
+
+a {
+  color: #5a3e2b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e6d5b8;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+}
+
+.nav-links li {
+  font-size: 1rem;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f0e6d2;
+  border-bottom: 1px solid #d2c3a3;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #6a5840;
+}
+
+/* About */
+.about {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Gallery */
+.gallery {
+  padding: 3rem 2rem;
+  background-color: #f8f4ee;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 1rem;
+}
+
+.instrument-card {
+  background-color: #fff;
+  border: 1px solid #d4c4af;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #e6d5b8;
+  font-size: 0.9rem;
+}
