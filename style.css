@@ -80,7 +80,7 @@ main.services-layout {
 }
 
 .fade-notes-bg {
-  background-image: linear-gradient(to left, rgba(249, 249, 249, 0), rgba(249, 249, 249, 1) 60%),
+  background-image: linear-gradient(to right, rgba(249, 249, 249, 0), rgba(249, 249, 249, 1) 60%),
     url('assets/Images/Backgrounds/notes.jfif');
   background-repeat: no-repeat;
   background-position: center;
