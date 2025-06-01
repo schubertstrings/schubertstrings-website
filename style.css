@@ -1,23 +1,19 @@
-/* Reset */
+/* Global Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base Styles */
 body {
-  font-family: 'Georgia', serif;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: #fdfaf5;
-  color: #333;
+  color: #3a3a3a;
+  line-height: 1.6;
 }
 
 a {
-  color: #5a3e2b;
+  color: #3a3a3a;
   text-decoration: none;
 }
 
@@ -25,115 +21,124 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header */
-header {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-}
-
-.banner {
-  width: 100%;
+img {
+  max-width: 100%;
   height: auto;
   display: block;
 }
 
+/* Header */
+header {
+  background-color: #f5eee6;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Make banner full width and maintain aspect ratio */
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Navigation Bar */
 nav {
-  background-color: #800000;
-  padding: 0.5rem 0;
+  background-color: #d8cfc0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  padding: 0;
+  flex-wrap: wrap;
+  padding: 0.5rem;
 }
 
-nav li a {
-  color: white;
+nav li {
+  margin: 0 1.5rem;
+}
+
+nav a {
   font-weight: bold;
-  font-size: 1rem;
-  text-transform: uppercase;
+  padding: 0.5rem;
+  transition: color 0.3s;
 }
 
-nav li a.active {
-  text-decoration: underline;
+nav a.active,
+nav a:hover {
+  color: #7c2f1c;
 }
 
-/* Layout */
+/* Main Layout */
 .services-layout {
   display: flex;
-  flex: 1;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
-/* Fixed scroll image */
+/* Fixed Left Sidebar */
 .scroll-column {
-  flex: 0 0 220px;
-  background-color: #fdfaf5;
-  position: fixed;
-  top: 160px; /* header + nav height estimate */
-  left: 0;
-  height: calc(100vh - 160px);
-  padding: 1rem;
-  z-index: 0;
+  width: 220px;
+  background-color: #e9e1d2;
+  padding: 1.5rem;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+  z-index: 2;
 }
 
-.scroll-column img {
-  width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-/* Main content area */
+/* Right Side: Content with Background */
 .service-text {
-  margin-left: 220px;
   overflow-y: auto;
   padding: 2rem;
-  height: calc(100vh - 160px);
-  flex: 1;
-  background-color: #fff;
-  scroll-behavior: smooth;
+  flex-grow: 1;
+  position: relative;
+  background-image: 
+    linear-gradient(to right, rgba(253,250,245,0.95) 0%, rgba(253,250,245,0.85) 60%, rgba(253,250,245,0) 100%),
+    url("assets/Images/Backgrounds/notes.jfif");
+  background-size: cover;
+  background-position: center left;
+  background-repeat: no-repeat;
 }
 
-/* Decorative faded background */
+/* Inner Content Container */
 .fade-notes-bg {
-  background-image: linear-gradient(to right, rgba(253,250,245,0.95) 0%, rgba(253,250,245,0.85) 60%, rgba(253,250,245,0) 100%),
-    url("assets/Images/Backgrounds/notes.jfif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left center;
-  padding: 2rem;
-  border-radius: 8px;
+  padding: 1rem;
+  background: transparent;
 }
 
 .fade-notes-bg p {
   margin-bottom: 1.2rem;
-  line-height: 1.6;
   font-size: 1.05rem;
 }
 
-/* Images */
-.top-photo, .bottom-photo {
-  width: 100%;
-  margin: 1rem 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+/* Image Styling */
+.top-photo,
+.bottom-photo {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* Footer */
 footer {
-  background-color: #e6d5b8;
+  background-color: #d8cfc0;
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  padding: 1rem 0;
+  font-size: 0.95rem;
+  margin-top: auto;
+  border-top: 2px solid #ccc;
 }
 
 .footer-tag {
-  font-size: 0.8rem;
-  color: #444;
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #6c6c6c;
 }
