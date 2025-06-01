@@ -5,17 +5,23 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  height: 100%;
   font-family: Arial, sans-serif;
-  background: #f9f9f9;
+  background-color: #f9f9f9;
   color: #222;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
+/* Flex column layout */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- HEADER --- */
 header {
   width: 100%;
+  flex-shrink: 0;
 }
 
 .banner {
@@ -50,20 +56,22 @@ nav a.active {
   text-decoration: underline;
 }
 
+/* --- MAIN SECTION --- */
 main.services-layout {
-  display: flex;
   flex: 1;
+  display: flex;
   min-height: 0;
   overflow: hidden;
 }
 
+/* LION COLUMN */
 .scroll-column {
   background: none;
-  padding: 1em;
   flex: 0 0 160px;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
+  align-items: flex-end;
+  padding: 1em;
 }
 
 .scroll-column img {
@@ -72,6 +80,7 @@ main.services-layout {
   display: block;
 }
 
+/* TEXT SECTION (scrollable) */
 .service-text {
   flex: 1;
   overflow-y: auto;
@@ -79,6 +88,7 @@ main.services-layout {
   position: relative;
 }
 
+/* REVERSED GRADIENT NOTES BACKGROUND */
 .fade-notes-bg {
   background-image: linear-gradient(to right, rgba(249, 249, 249, 0), rgba(249, 249, 249, 1) 60%),
     url('assets/Images/Backgrounds/notes.jfif');
@@ -89,6 +99,7 @@ main.services-layout {
   border-radius: 5px;
 }
 
+/* IMAGES IN TEXT */
 .fade-notes-bg img.top-photo,
 .fade-notes-bg img.bottom-photo {
   max-width: 100%;
@@ -96,6 +107,7 @@ main.services-layout {
   margin: 1.5em 0;
 }
 
+/* --- FOOTER --- */
 footer {
   background-color: #4e4e4e;
   color: white;
@@ -114,7 +126,7 @@ footer a {
   margin-top: 0.5em;
 }
 
-/* Optional: Make sure large images don't zoom oddly on ctrl-minus */
+/* Prevent image zoom-in on zoom-out */
 img {
   max-width: 100%;
   height: auto;
