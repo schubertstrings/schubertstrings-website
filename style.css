@@ -61,7 +61,7 @@ main.services-layout {
   display: flex;
   min-height: 0;
   overflow: hidden;
-  background-image: linear-gradient(to right, rgba(249, 249, 249, 0), rgba(249, 249, 249, 1) 60%), url('assets/Images/Backgrounds/notes.jfif');
+  background-image: linear-gradient(to right, rgba(249, 249, 249, 0), rgba(249, 249, 249, 1) 75%), url('assets/Images/Backgrounds/notes.jfif');
   background-position: center;
   background-size: cover;
 }
