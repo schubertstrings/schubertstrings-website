@@ -30,7 +30,7 @@ header {
 }
 
 nav {
-  background: linear-gradient(to bottom, #9C917F, #837767, #665950, #4A3D35, #342927);
+  background-color: linear-gradient(to bottom, #9C917F, #837767, #665950, #4A3D35, #342927);
 }
 
 nav ul {
